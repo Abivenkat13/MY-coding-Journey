@@ -1,0 +1,27 @@
+class calculator:
+  def __init__(self,num1,num2,op):
+    self.num1=num1
+    self.num2=num2
+    self.op=op
+  def add(self):
+    return self.num1+self.num2
+  def sub(self):
+    return self.num1-self.num2
+  def mul(self):
+    return self.num1*self.num2
+  def execute_operator(self):
+    if self.op=='+':
+      return self.add()
+    elif self.op=='-':
+      return self.sub()
+    elif self.op=='*':
+      return self.mul()
+    else:
+      return "invalid operation"
+
+num1=int(input("enter the number1:"))
+num2=int(input("enter the num2:"))
+op=input("enter the operator need to be performed:")
+
+obj1=calculator(num1,num2,op)
+obj1.execute_operator()
