@@ -1,0 +1,15 @@
+l=[]
+
+for i in range(5):
+  b=int(input("enter the number:"))
+  c=l.append(b) 
+
+a=set(l)
+
+def unique():
+  if len(l)==len(a):
+     print("Elements in the list are unique")
+  else:
+    print("Elements in the list are not unique") 
+
+unique()
