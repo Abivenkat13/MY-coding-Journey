@@ -1,0 +1,9 @@
+n = input("Enter the number: ") 
+
+for i in n:
+    astr += int(i) ** len(n) 
+
+if astr == int(n):  
+    print("It's an Armstrong number")
+else:
+    print("Its not an Amstrong number")
