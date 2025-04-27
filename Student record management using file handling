@@ -1,0 +1,35 @@
+def add_student():
+    name = input("Enter the name: ")
+    marks = input("Enter the marks: ")
+    regno = input("Enter the regno: ")
+    with open("txt.file", 'a') as file:
+        file.write(f"{name},{marks},{regno}\n")  # fixed typo here
+        print("Added successfully!")
+
+def view_student():
+    with open("txt.file", 'r') as file:
+        s = file.read()
+        if s:
+            print("The students are:")
+            print(s)
+        else:
+            print("No records found.")
+
+while True:
+    print("\n1. Add student")
+    print("2. View records")
+    print("3. Exit")
+
+   
+    choice = int(input("Enter your choice: "))
+   
+
+    if choice == 1:
+        add_student()
+    elif choice == 2:
+        view_student()
+    elif choice == 3:
+        break
+    else:
+        print("Invalid choice. Please select 1, 2, or 3.")
+ 
